@@ -163,6 +163,40 @@
                     app:layout_constraintTop_toBottomOf="@id/til_password"
                     android:layout_marginTop="@dimen/common_padding_1x"/>
 
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_alt"
+                    app:layout_constraintEnd_toEndOf="@id/tv_title_alt"
+                    app:layout_constraintTop_toBottomOf="@id/cb_enable_password"
+                    android:layout_marginTop="@dimen/common_padding_3x"/>
+
+                <TextView
+                    android:id="@+id/tv_subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_title"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_alt"
+                    app:layout_constraintEnd_toEndOf="@id/tv_title_alt"
+                    app:layout_constraintTop_toBottomOf="@id/view_divider"
+                    android:layout_marginTop="@dimen/common_padding_3x"/>
+
+                <TextView
+                    android:id="@+id/tv_message_alt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/large_text"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_alt"
+                    app:layout_constraintEnd_toEndOf="@id/tv_title_alt"
+                    app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+                    android:layout_marginTop="@dimen/common_padding_2x"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>

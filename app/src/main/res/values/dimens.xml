@@ -6,5 +6,6 @@
     <dimen name="common_padding_1x">8dp</dimen>
     <dimen name="common_padding_2x">16dp</dimen>
     <dimen name="card_cover_height">160dp</dimen>
+    <dimen name="common_padding_3x">24dp</dimen>
 
 </resources>
