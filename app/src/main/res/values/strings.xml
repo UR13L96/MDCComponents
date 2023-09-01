@@ -97,4 +97,7 @@
     <string name="input_required">Required</string>
     <string name="hint_password">Password</string>
     <string name="cb_enable_password">Enable password</string>
+    <string name="color_red">Red</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
 </resources>
