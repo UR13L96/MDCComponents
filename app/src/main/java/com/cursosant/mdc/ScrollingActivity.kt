@@ -25,6 +25,12 @@ class ScrollingActivity : AppCompatActivity() {
                 binding.bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
             }
         }
+
+        binding.bottomAppBar.setNavigationOnClickListener {
+            Snackbar.make(binding.root, getString(R.string.successful_event), Snackbar.LENGTH_LONG)
+                .setAnchorView(binding.fab)
+                .show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

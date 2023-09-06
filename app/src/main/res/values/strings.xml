@@ -100,4 +100,5 @@
     <string name="color_red">Red</string>
     <string name="color_green">Green</string>
     <string name="color_blue">Blue</string>
+    <string name="successful_event">Successful event!</string>
 </resources>
