@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import com.cursosant.mdc.databinding.ActivityScrollingBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.snackbar.Snackbar
@@ -35,6 +36,15 @@ class ScrollingActivity : AppCompatActivity() {
 
         binding.content.btnSkip.setOnClickListener {
             binding.content.cvAd.visibility = View.GONE
+        }
+
+        binding.content.btnBuy.setOnClickListener {
+            Snackbar.make(it, getString(R.string.purchased), Snackbar.LENGTH_LONG)
+                .setAnchorView(binding.fab)
+                .setAction(getString(R.string.go), {
+                    Toast.makeText(this, getString(R.string.success), Toast.LENGTH_SHORT).show()
+                })
+                .show()
         }
     }
 

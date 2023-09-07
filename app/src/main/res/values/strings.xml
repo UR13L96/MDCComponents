@@ -101,4 +101,7 @@
     <string name="color_green">Green</string>
     <string name="color_blue">Blue</string>
     <string name="successful_event">Successful event!</string>
+    <string name="purchased">Purchased</string>
+    <string name="go">Go</string>
+    <string name="success">Success</string>
 </resources>
