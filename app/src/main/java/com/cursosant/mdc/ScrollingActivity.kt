@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.cursosant.mdc.databinding.ActivityScrollingBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.snackbar.Snackbar
@@ -46,6 +48,12 @@ class ScrollingActivity : AppCompatActivity() {
                 })
                 .show()
         }
+
+        Glide.with(this)
+            .load("https://pamipe.com/wiki/wp-content/uploads/2022/09/Dogo-de-Burdeos-2-1-800x780.jpg")
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .centerCrop()
+            .into(binding.content.imgCover)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
