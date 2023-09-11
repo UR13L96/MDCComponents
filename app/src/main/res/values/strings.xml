@@ -104,4 +104,6 @@
     <string name="purchased">Purchased</string>
     <string name="go">Go</string>
     <string name="success">Success</string>
+    <string name="required_field">This field is required</string>
+    <string name="invalid_url">Invalid URL</string>
 </resources>
