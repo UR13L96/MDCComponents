@@ -49,15 +49,28 @@ class ScrollingActivity : AppCompatActivity() {
                 .show()
         }
 
-        Glide.with(this)
-            .load("https://pamipe.com/wiki/wp-content/uploads/2022/09/Dogo-de-Burdeos-2-1-800x780.jpg")
-            .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .centerCrop()
-            .into(binding.content.imgCover)
+        loadImage("https://pamipe.com/wiki/wp-content/uploads/2022/09/Dogo-de-Burdeos-2-1-800x780.jpg")
 
         binding.content.cbEnablePassword.setOnClickListener {
             binding.content.tilPassword.isEnabled = !binding.content.tilPassword.isEnabled
         }
+
+        binding.content.etUrl.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
+            if (!b) {
+                val url = binding.content.etUrl.text.toString()
+                loadImage(url)
+            }
+        }
+
+
+    }
+
+    private fun loadImage(url: String) {
+        Glide.with(this)
+            .load(url)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .centerCrop()
+            .into(binding.content.imgCover)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
