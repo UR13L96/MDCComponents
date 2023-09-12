@@ -1,5 +1,6 @@
 package com.cursosant.mdc
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -71,7 +72,20 @@ class ScrollingActivity : AppCompatActivity() {
             }
         }
 
-
+        binding.content.toggleGroup.addOnButtonCheckedListener { group, checkedId, isChecked ->
+            if (!isChecked) {
+                binding.content.root.setBackgroundColor(Color.WHITE)
+            } else {
+                binding.content.root.setBackgroundColor(
+                    when(checkedId) {
+                        R.id.btn_red -> Color.RED
+                        R.id.btn_green -> Color.GREEN
+                        R.id.btn_blue -> Color.BLUE
+                        else -> Color.WHITE
+                    }
+                )
+            }
+        }
     }
 
     private fun loadImage(url: String) {
