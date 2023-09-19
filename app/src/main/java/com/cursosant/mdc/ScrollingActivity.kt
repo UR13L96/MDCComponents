@@ -45,9 +45,9 @@ class ScrollingActivity : AppCompatActivity() {
         binding.content.btnBuy.setOnClickListener {
             Snackbar.make(it, getString(R.string.purchased), Snackbar.LENGTH_LONG)
                 .setAnchorView(binding.fab)
-                .setAction(getString(R.string.go), {
+                .setAction(getString(R.string.go)) {
                     Toast.makeText(this, getString(R.string.success), Toast.LENGTH_SHORT).show()
-                })
+                }
                 .show()
         }
 
@@ -57,7 +57,7 @@ class ScrollingActivity : AppCompatActivity() {
             binding.content.tilPassword.isEnabled = !binding.content.tilPassword.isEnabled
         }
 
-        binding.content.etUrl.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
+        binding.content.etUrl.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
             if (!b) {
                 var errorMessage: String? = null
                 val url = binding.content.etUrl.text.toString()
@@ -72,7 +72,7 @@ class ScrollingActivity : AppCompatActivity() {
             }
         }
 
-        binding.content.toggleGroup.addOnButtonCheckedListener { group, checkedId, isChecked ->
+        binding.content.toggleGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (!isChecked) {
                 binding.content.root.setBackgroundColor(Color.WHITE)
             } else {

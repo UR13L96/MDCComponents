@@ -19,7 +19,8 @@
         app:menu="@menu/menu_scrolling"
         app:hideOnScroll="true"
         app:fabAnimationMode="slide"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        tools:ignore="VisualLintBottomAppBar" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
