@@ -106,4 +106,6 @@
     <string name="success">Success</string>
     <string name="required_field">This field is required</string>
     <string name="invalid_url">Invalid URL</string>
+    <string name="hide_fab">Hide FAB</string>
+    <string name="show_fab">Show FAB</string>
 </resources>

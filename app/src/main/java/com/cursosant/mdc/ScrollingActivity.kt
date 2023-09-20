@@ -86,6 +86,16 @@ class ScrollingActivity : AppCompatActivity() {
                 )
             }
         }
+
+        binding.content.swFab.setOnCheckedChangeListener { button, isChecked ->
+            if (isChecked) {
+                button.text = getString(R.string.hide_fab)
+                binding.fab.show()
+            } else {
+                button.text = getString(R.string.show_fab)
+                binding.fab.hide()
+            }
+        }
     }
 
     private fun loadImage(url: String) {
