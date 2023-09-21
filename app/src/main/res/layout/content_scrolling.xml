@@ -175,6 +175,16 @@
                     app:layout_constraintTop_toTopOf="@id/cb_enable_password"
                     app:layout_constraintBottom_toBottomOf="@id/cb_enable_password"/>
 
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sl_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0.0"
+                    android:valueTo="10.0"
+                    android:value="6.0"
+                    android:stepSize="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/cb_enable_password"/>
+
                 <View
                     android:id="@+id/view_divider"
                     android:layout_width="0dp"
@@ -182,7 +192,7 @@
                     android:background="@color/divider"
                     app:layout_constraintStart_toStartOf="@id/tv_title_alt"
                     app:layout_constraintEnd_toEndOf="@id/tv_title_alt"
-                    app:layout_constraintTop_toBottomOf="@id/cb_enable_password"
+                    app:layout_constraintTop_toBottomOf="@id/sl_volume"
                     android:layout_marginTop="@dimen/common_padding_3x"/>
 
                 <TextView

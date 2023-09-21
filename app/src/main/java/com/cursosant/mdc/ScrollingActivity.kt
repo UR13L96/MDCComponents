@@ -96,6 +96,10 @@ class ScrollingActivity : AppCompatActivity() {
                 binding.fab.hide()
             }
         }
+
+        binding.content.slVolume.addOnChangeListener { _, value, _ ->
+            binding.content.tvSubtitle.text = "Volume: $value"
+        }
     }
 
     private fun loadImage(url: String) {
