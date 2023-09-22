@@ -100,6 +100,16 @@ class ScrollingActivity : AppCompatActivity() {
         binding.content.slVolume.addOnChangeListener { _, value, _ ->
             binding.content.tvSubtitle.text = "Volume: $value"
         }
+
+        binding.content.chipEmail.setOnCheckedChangeListener { chip, isChecked ->
+            if (isChecked) {
+                Toast.makeText(this, chip.text, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.content.chipEmail.setOnCloseIconClickListener {
+            binding.content.chipEmail.visibility = View.GONE
+        }
     }
 
     private fun loadImage(url: String) {

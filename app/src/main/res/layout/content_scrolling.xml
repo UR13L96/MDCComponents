@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hide_fab"
                     android:checked="true"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tv_title_alt"
                     app:layout_constraintTop_toTopOf="@id/cb_enable_password"
                     app:layout_constraintBottom_toBottomOf="@id/cb_enable_password"/>
 
@@ -185,6 +185,16 @@
                     android:stepSize="1.0"
                     app:layout_constraintTop_toBottomOf="@id/cb_enable_password"/>
 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test@test.com"
+                    android:checkable="true"
+                    app:closeIconEnabled="true"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_alt"
+                    app:layout_constraintTop_toBottomOf="@id/sl_volume"/>
+
                 <View
                     android:id="@+id/view_divider"
                     android:layout_width="0dp"
@@ -192,7 +202,7 @@
                     android:background="@color/divider"
                     app:layout_constraintStart_toStartOf="@id/tv_title_alt"
                     app:layout_constraintEnd_toEndOf="@id/tv_title_alt"
-                    app:layout_constraintTop_toBottomOf="@id/sl_volume"
+                    app:layout_constraintTop_toBottomOf="@id/chip_email"
                     android:layout_marginTop="@dimen/common_padding_3x"/>
 
                 <TextView
